@@ -82,9 +82,9 @@ const AboutSection = () => {
               </h3>
               <p className="text-gray-700 mb-4">
                 At TMPCCI, we embrace modern educational technologies to enhance
-                our students' learning experience. We proudly utilize Quipper, a
-                comprehensive digital learning platform, to provide our students
-                with:
+                our students&apos; learning experience. We proudly utilize
+                Quipper, a comprehensive digital learning platform, to provide
+                our students with:
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                 <li className="transition-colors duration-300 hover:text-indigo-800">

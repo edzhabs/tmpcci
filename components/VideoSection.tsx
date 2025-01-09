@@ -1,10 +1,8 @@
 "use client";
-import { useState } from "react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const VideoSection = () => {
   const [ref, isIntersecting] = useIntersectionObserver();
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <section
@@ -41,7 +39,6 @@ const VideoSection = () => {
                 title="YouTube video"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowFullScreen
-                onLoad={() => setVideoLoaded(true)}
               />
             )}
           </div>

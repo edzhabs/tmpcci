@@ -1,13 +1,12 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import { useScrollAnimation } from '@/utils/useScrollAnimation'
-import ImageModal from './ImageModal'
+import { useState } from "react";
+import { useScrollAnimation } from "@/utils/useScrollAnimation";
+import ImageModal from "./ImageModal";
 
 const GalleryModal = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
-  const animationRef = useScrollAnimation()
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const animationRef = useScrollAnimation();
 
   return (
     <>
@@ -17,12 +16,11 @@ const GalleryModal = () => {
       <ImageModal
         isOpen={!!selectedImage}
         onClose={() => setSelectedImage(null)}
-        imageSrc={selectedImage || ''}
+        imageSrc={selectedImage || ""}
         alt="Enlarged school activity"
       />
     </>
-  )
-}
+  );
+};
 
-export default GalleryModal
-
+export default GalleryModal;
