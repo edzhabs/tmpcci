@@ -1,27 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-primary: #0D9488;
-  --color-secondary: #14B8A6;
-  --color-background: #F0FDFA;
+  --color-primary: #4f46e5;
+  --color-secondary: #14b8a6;
+  --color-background: #f0fdfa;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  color: #1F2937;
+  font-family: "Nunito", sans-serif;
+  color: #1f2937;
   background-color: var(--color-background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
 }
 
 .bg-gradient {
-  background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
 }
 
 .text-shadow {
@@ -91,7 +100,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-animation {
   opacity: 0;
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .section-animation.animate {
@@ -99,3 +110,19 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+/* Hover Animations */
+.hover-lift {
+  transition: transform 0.3s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-grow {
+  transition: transform 0.3s ease-out;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}

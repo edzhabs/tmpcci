@@ -1,11 +1,10 @@
 "use client";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { useState } from "react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const VideoSection = () => {
   const [ref, isIntersecting] = useIntersectionObserver();
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <section
@@ -23,27 +22,28 @@ const VideoSection = () => {
         >
           Experience TMPCCI
         </h2>
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-5xl">
           <div
             className={`relative aspect-video overflow-hidden rounded-xl shadow-lg ${
               isIntersecting ? "animate-scale-in" : ""
             }`}
           >
-            <Image
-              src="/placeholder.svg?height=1080&width=1920&text=School+Video+Thumbnail"
-              alt="School Video Thumbnail"
-              layout="fill"
-              objectFit="cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition-opacity duration-300 ease-in-out">
-              <Button
-                size="lg"
-                className="rounded-full bg-white p-6 text-blue-600 hover:bg-blue-50"
-                onClick={() => alert("Play video")}
-              >
-                <Play className="h-16 w-16" />
-              </Button>
-            </div>
+            {isIntersecting && (
+              <iframe
+                className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                  isIntersecting ? "opacity-100" : "opacity-0"
+                }`}
+                src={
+                  isIntersecting
+                    ? "https://www.youtube.com/embed/vUOah35zeT4?autoplay=1&mute=1&rel=0"
+                    : ""
+                }
+                title="YouTube video"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+                onLoad={() => setVideoLoaded(true)}
+              />
+            )}
           </div>
         </div>
       </div>
