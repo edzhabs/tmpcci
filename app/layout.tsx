@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Talisay Mind Power Creativity Center Incorporated (TMPCCI)",
     description:
       "An educational institution devoted and dedicated in transforming minds, molding hearts and empowering.",
-    images: ["/images/tmpcci-logo.png"],
+    images: ["/images/meta-logo.png"],
   },
   twitter: {
     card: "summary_large_image",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       "An educational institution devoted and dedicated in transforming minds, molding hearts and empowering.",
 
-    images: ["/images/tmpcci-logo.png"],
+    images: ["/images/meta-logo.png"],
   },
 };
 
