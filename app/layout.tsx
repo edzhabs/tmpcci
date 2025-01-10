@@ -39,7 +39,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta
           name="google-site-verification"
-          content="Qv7yHtwr_MA-Dlw698iG1TMmhPVqRAkpqU2XnTmefBs"
+          content="z6gDGhw6Q6MRtM8YBzaHHVbYXwBvALyDTYOOfcQ81eA"
         />
       </head>
       <body className={inter.className}>{children}</body>
