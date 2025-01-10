@@ -73,14 +73,14 @@ const HomeSection = () => {
             </span>
           </div>
           <div
-            className={`flex flex-wrap justify-center gap-4 ${
+            className={`grid grid-cols-2 sm:grid-cols-4 gap-4 ${
               isIntersecting ? "animate-fade-in" : ""
             }`}
             style={{ animationDelay: "1.2s" }}
           >
             <Button
               size="lg"
-              className="bg-yellow-600 text-white hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-yellow-600 hover:bg-yellow-700 w-full text-white transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
               onClick={() =>
                 document
                   .getElementById("contact")!
@@ -98,7 +98,7 @@ const HomeSection = () => {
                   "_blank",
                 )
               }
-              className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-blue-600 hover:bg-blue-700 w-full text-white transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
             >
               <Facebook className="mr-2 h-5 w-5" />
               Facebook
@@ -111,7 +111,7 @@ const HomeSection = () => {
                   "_blank",
                 )
               }
-              className="bg-red-600 text-white hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-red-600 hover:bg-red-700 w-full text-white transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
             >
               <Youtube className="mr-2 h-5 w-5" />
               YouTube
@@ -124,7 +124,7 @@ const HomeSection = () => {
                   "_blank",
                 )
               }
-              className="bg-emerald-600 text-white hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-emerald-600 hover:bg-emerald-700 w-full text-white transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
             >
               <MapPin className="mr-2 h-5 w-5" />
               Directions
