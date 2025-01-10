@@ -1,5 +1,4 @@
-"use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -16,6 +15,18 @@ const ImageModal: React.FC<ImageModalProps> = ({
   imageSrc,
   alt,
 }) => {
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    if (isOpen) {
+      const img = new window.Image();
+      img.onload = () => {
+        setDimensions({ width: img.width, height: img.height });
+      };
+      img.src = imageSrc;
+    }
+  }, [isOpen, imageSrc]);
+
   if (!isOpen) return null;
 
   return (
@@ -32,19 +43,25 @@ const ImageModal: React.FC<ImageModalProps> = ({
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0.9 }}
-            className="relative w-full h-full max-w-[90vw] max-h-[90vh] overflow-hidden rounded-lg bg-white"
-            onClick={(e) => e.stopPropagation()}
+            className="relative overflow-hidden rounded-lg"
+            style={{
+              width: `min(${dimensions.width}px, 90vw)`,
+              height: `min(${dimensions.height}px, 90vh)`,
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              aspectRatio: `${dimensions.width} / ${dimensions.height}`,
+            }}
           >
             <Image
               src={imageSrc}
               alt={alt}
               layout="fill"
               objectFit="contain"
-              className="w-full h-full"
+              className="rounded-lg"
             />
             <button
               onClick={onClose}
-              className="absolute right-2 top-2 rounded-full bg-white p-2 text-gray-800 hover:bg-gray-200 transition-colors duration-300"
+              className="absolute right-0 top-0 m-2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
