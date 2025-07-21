@@ -4,7 +4,6 @@ import AboutSection from '@/components/AboutSection'
 import ProgramsSection from '@/components/ProgramsSection'
 import GallerySection from '@/components/GallerySection'
 import VideoSection from '@/components/VideoSection'
-import TeachersSection from '@/components/TeachersSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
@@ -20,7 +19,6 @@ export default function ElementarySchoolLanding() {
         <ProgramsSection />
         <GallerySection />
         <VideoSection />
-        <TeachersSection />
         <ContactSection />
       </main>
 
