@@ -10,9 +10,8 @@ const HomeSection = () => {
     <section
       ref={ref}
       id="home"
-      className={`relative min-h-[calc(100vh-4rem)] overflow-hidden section-animation ${
-        isIntersecting ? "animate" : ""
-      }`}
+      className={`relative min-h-[calc(100vh-4rem)] overflow-hidden section-animation ${isIntersecting ? "animate" : ""
+        }`}
     >
       <div className="absolute inset-0">
         <video
@@ -22,7 +21,7 @@ const HomeSection = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/landing-page/drone-shot.mp4" type="video/mp4" />
+          <source src="/videos/landing-page/tmpcci_drone.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-blue-900/70"></div>
@@ -30,18 +29,16 @@ const HomeSection = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="text-center text-white max-w-6xl mx-auto px-4">
           <h1
-            className={`mb-2 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl leading-tight ${
-              isIntersecting ? "animate-fade-in" : ""
-            }`}
+            className={`mb-2 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl leading-tight ${isIntersecting ? "animate-fade-in" : ""
+              }`}
           >
             <span className="bg-blue-600 bg-opacity-75 px-2 py-1 rounded">
               Welcome to
             </span>
           </h1>
           <div
-            className={`mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight ${
-              isIntersecting ? "animate-scale-in" : ""
-            }`}
+            className={`mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight ${isIntersecting ? "animate-scale-in" : ""
+              }`}
             style={{ animationDelay: "0.3s" }}
           >
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
@@ -53,9 +50,8 @@ const HomeSection = () => {
             </span>
           </div>
           <p
-            className={`mb-8 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto ${
-              isIntersecting ? "animate-fade-in" : ""
-            }`}
+            className={`mb-8 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto ${isIntersecting ? "animate-fade-in" : ""
+              }`}
             style={{ animationDelay: "0.6s" }}
           >
             <span className="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm inline-block">
@@ -63,9 +59,8 @@ const HomeSection = () => {
             </span>
           </p>
           <div
-            className={`mb-8 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold ${
-              isIntersecting ? "animate-fade-in" : ""
-            }`}
+            className={`mb-8 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold ${isIntersecting ? "animate-fade-in" : ""
+              }`}
             style={{ animationDelay: "0.9s" }}
           >
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
@@ -73,9 +68,8 @@ const HomeSection = () => {
             </span>
           </div>
           <div
-            className={`grid grid-cols-2 sm:grid-cols-4 gap-4 ${
-              isIntersecting ? "animate-fade-in" : ""
-            }`}
+            className={`grid grid-cols-2 sm:grid-cols-4 gap-4 ${isIntersecting ? "animate-fade-in" : ""
+              }`}
             style={{ animationDelay: "1.2s" }}
           >
             <Button
