@@ -12,7 +12,6 @@ const sections = [
   "programs",
   "gallery",
   "video",
-  "teachers",
   "contact",
 ];
 
@@ -92,9 +91,8 @@ const Navbar = () => {
             <li key={section}>
               <Button
                 variant="ghost"
-                className={`text-blue-600 hover:text-yellow-500 hover:bg-blue-50 transition-colors duration-200 ${
-                  activeSection === section ? "bg-blue-100 font-semibold" : ""
-                }`}
+                className={`text-blue-600 hover:text-yellow-500 hover:bg-blue-50 transition-colors duration-200 ${activeSection === section ? "bg-blue-100 font-semibold" : ""
+                  }`}
                 onClick={() => scrollToSection(section)}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
